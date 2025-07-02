@@ -7,6 +7,9 @@ __pycache__/
 *.so
 *.egg
 *.egg-info/
+*/migrations/
+*/migrations/__pycache__/
+*/migrations/*.pyc
 dist/
 build/
 .eggs/
