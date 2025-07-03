@@ -7,6 +7,7 @@ import Projects from './pages/Projects';
 import Consultation from './pages/Consultation';
 
 function App() {
+  
   return (
     <Router>
       <div className="min-h-screen bg-gray-50">

@@ -27,6 +27,7 @@ media/
 staticfiles/
 .env
 .env.*
+**/migrations/
 
 # Node/Vite/React
 node_modules/
