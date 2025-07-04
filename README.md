@@ -1,5 +1,5 @@
 # Daily/Weekly Project Documentation
-## Work completed today/this week (2024-07-03)
+## Work completed today/this week (2025-07-03)
 
 - Set up login and registration pages with Google (OAuth) authentication support.
 - Added Facebook and LinkedIn login buttons (currently as placeholders).
@@ -10,7 +10,7 @@
 - Ensured migrations folders are ignored by git tracking.
 - Documented all code changes and committed them to git.
 
-## الأعمال المنجزة اليوم/هذا الأسبوع (2024-07-03)
+## الأعمال المنجزة اليوم/هذا الأسبوع (2025-07-03)
 
 - إعداد صفحات تسجيل الدخول وتسجيل الحساب مع دعم تسجيل الدخول عبر Google (OAuth).
 - إضافة أزرار تسجيل الدخول عبر Facebook وLinkedIn (كأزرار وهمية حالياً).
