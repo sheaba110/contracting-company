@@ -7,13 +7,10 @@ function Register({
   isModal?: boolean;
   onSwitch?: () => void;
 }) {
-  const handleFacebookSignup = () => {
-    window.location.href = "http://localhost:8000/accounts/facebook/login/";
-  };
 
   const handleLinkedInRegister = () => {
-    alert("التسجيل عبر LinkedIn غير مفعل بعد");
-    // هنا يمكنك إضافة منطق التسجيل الحقيقي
+    alert("LinkedIn registration is not enabled yet");
+    // You can add real LinkedIn registration logic here
   };
   return (
     <div
@@ -24,18 +21,18 @@ function Register({
       }
     >
       <div className="card p-8 max-w-md w-full">
-        <h1 className="text-3xl font-bold mb-6 text-center">إنشاء حساب جديد</h1>
+        <h1 className="text-3xl font-bold mb-6 text-center">Register</h1>
         <form className="space-y-4 mb-6">
           <div>
-            <label className="form-label">الاسم الكامل</label>
+            <label className="form-label">Full Name</label>
             <input
               type="text"
               className="form-input"
-              placeholder="أدخل اسمك الكامل"
+              placeholder="Enter your full name"
             />
           </div>
           <div>
-            <label className="form-label">البريد الإلكتروني</label>
+            <label className="form-label">Email</label>
             <input
               type="email"
               className="form-input"
@@ -43,7 +40,7 @@ function Register({
             />
           </div>
           <div>
-            <label className="form-label">كلمة المرور</label>
+            <label className="form-label">Password</label>
             <input
               type="password"
               className="form-input"
@@ -51,18 +48,18 @@ function Register({
             />
           </div>
           <button type="submit" className="btn-primary w-full">
-            تسجيل
+            Register
           </button>
         </form>
-        <div className="text-center mb-4 text-gray-500">أو سجل عبر</div>
+        <div className="text-center mb-4 text-gray-500">Or register with</div>
         <div className="flex flex-col gap-3 mb-6">
           <GoogleLogin
             onSuccess={(credentialResponse) => {
-              // هنا يمكنك إرسال التوكن للسيرفر أو حفظه في الستيت
+              // Here you can send the token to your backend or save it in state
               console.log(credentialResponse);
             }}
             onError={() => {
-              alert("فشل التسجيل عبر Google");
+              alert("Google registration failed");
             }}
             width="100%"
             text="signup_with"
@@ -82,33 +79,33 @@ function Register({
             }
           >
             <i className="fab fa-facebook-f text-lg"></i>
-            <span>تسجيل الدخول باستخدام Facebook</span>
+            <span>Register with Facebook</span>
           </button>
 
           <button
             className="btn-secondary w-full"
-            onClick={handleFacebookSignup}
+            onClick={handleLinkedInRegister}
           >
-            التسجيل عبر LinkedIn
+            Register with LinkedIn
           </button>
         </div>
         <div className="text-center text-gray-600">
           {!isModal ? (
             <>
-              لديك حساب بالفعل؟{" "}
+              Already have an account?{" "}
               <a href="/login" className="text-primary-600 hover:underline">
-                تسجيل الدخول
+                Login
               </a>
             </>
           ) : (
             <>
-              لديك حساب بالفعل؟{" "}
+              Already have an account?{" "}
               <button
                 type="button"
                 className="text-primary-600 hover:underline"
                 onClick={onSwitch}
               >
-                تسجيل الدخول
+                Login
               </button>
             </>
           )}

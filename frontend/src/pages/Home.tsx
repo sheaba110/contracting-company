@@ -1,22 +1,22 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Building2, Users, Award, Clock, ArrowLeft } from "lucide-react";
 import Login from "./Login";
 import Register from "./Register";
 
 function Home() {
-  // مثال: حالة تسجيل الدخول (في التطبيق الحقيقي استخدم context أو redux)
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  // Example: authentication state (in real app use context or redux)
+  const [isAuthenticated] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
   const navigate = useNavigate();
 
-  // دالة مشتركة للتعامل مع الأزرار
+  // Shared handler for protected buttons
   const handleProtectedClick = (callback: () => void) => {
     if (isAuthenticated) {
-      setShowLogin(true);
+      callback();
     } else {
-      setShowRegister(true);
+      setShowLogin(true);
     }
   };
 
@@ -155,7 +155,7 @@ function Home() {
           </button>
         </div>
       </section>
-      {/* نافذة تسجيل الدخول */}
+      {/* Login Modal */}
       {showLogin && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40"
@@ -175,7 +175,7 @@ function Home() {
           </div>
         </div>
       )}
-      {/* نافذة تسجيل الاشتراك */}
+      {/* Register Modal */}
       {showRegister && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40"
