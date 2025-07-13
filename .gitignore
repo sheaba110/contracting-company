@@ -22,7 +22,7 @@ db.sqlite3
 *.pyo
 *.db
 *.sqlite3
-code-reistration.txt
+D:\contracting-company\code-registration.txt
 media/
 staticfiles/
 .env
