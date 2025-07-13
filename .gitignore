@@ -22,7 +22,6 @@ db.sqlite3
 *.pyo
 *.db
 *.sqlite3
-D:\contracting-company\code-registration.txt
 media/
 staticfiles/
 .env
@@ -67,3 +66,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+
+
+code-registration.txt
