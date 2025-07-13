@@ -22,8 +22,7 @@ db.sqlite3
 *.pyo
 *.db
 *.sqlite3
-*.txt
-!requirements.txt
+code-reistration.txt
 media/
 staticfiles/
 .env
