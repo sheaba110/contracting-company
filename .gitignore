@@ -15,8 +15,6 @@ build/
 .eggs/
 *.sqlite3
 db.sqlite3
-*.txt
-!requirements.txt
 # Django
 *.log
 *.pot
@@ -24,6 +22,8 @@ db.sqlite3
 *.pyo
 *.db
 *.sqlite3
+*.txt
+!requirements.txt
 media/
 staticfiles/
 .env
