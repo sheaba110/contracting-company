@@ -15,7 +15,8 @@ build/
 .eggs/
 *.sqlite3
 db.sqlite3
-
+*.txt
+!requirements.txt
 # Django
 *.log
 *.pot
@@ -28,7 +29,7 @@ staticfiles/
 .env
 .env.*
 **/migrations/
-code-registration.txt
+
 # Node/Vite/React
 node_modules/
 dist/
