@@ -67,5 +67,6 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-
-code-registration.txt
+#Private Files
+*.txt
+!requirements.txt
