@@ -1,4 +1,5 @@
 import { GoogleLogin } from "@react-oauth/google";
+import FacebookLoginButton from "../components/FacebookLoginButton"; // تأكد من المسار الصحيح
 
 function Login({
   isModal = false,
@@ -7,13 +8,10 @@ function Login({
   isModal?: boolean;
   onSwitch?: () => void;
 }) {
-  const handleFacebookSignup = () => {
-    window.location.href = "http://localhost:8000/accounts/facebook/login/";
+  const handleLinkedInLogin = () => {
+    alert("LinkedIn login is not enabled yet");
   };
-  // const handleLinkedInLogin = () => {
-  //   alert("LinkedIn login is not enabled yet");
-  //   // You can add real LinkedIn login logic here
-  // };
+
   return (
     <div
       className={
@@ -45,13 +43,13 @@ function Login({
             Login
           </button>
         </form>
+
         <div className="text-center mb-4 text-gray-500">Or login with</div>
         <div className="flex flex-col gap-3 mb-6">
           <GoogleLogin
             onSuccess={(
               credentialResponse: import("@react-oauth/google").CredentialResponse
             ) => {
-              // Here you can send the token to your backend or save it in state
               console.log(credentialResponse);
             }}
             onError={() => {
@@ -62,25 +60,17 @@ function Login({
             shape="pill"
             locale="ar"
           />
-          <button
-            className="flex items-center justify-center gap-2 w-full py-2 rounded-full text-white text-sm font-medium"
-            style={{ backgroundColor: "#1877f2" }}
-            onClick={() =>
-              (window.location.href =
-                "http://localhost:8000/accounts/facebook/login/")
-            }
-          >
-            <i className="fab fa-facebook-f text-lg"></i>
-            <span>Login with Facebook</span>
-          </button>
+
+          <FacebookLoginButton /> {/* ✅ زر الفيسبوك الجديد */}
 
           <button
             className="btn-secondary w-full"
-            onClick={handleFacebookSignup}
+            onClick={handleLinkedInLogin}
           >
             Login with LinkedIn
           </button>
         </div>
+
         <div className="text-center text-gray-600">
           {!isModal ? (
             <>

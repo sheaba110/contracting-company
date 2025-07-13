@@ -20,3 +20,20 @@
 - إضافة وتحديث .gitignore ليشمل مجلدات الهجرة (migrations) وجميع الملفات غير الضرورية.
 - التأكد من تجاهل مجلدات الهجرة من تتبع git.
 - توثيق جميع التغييرات البرمجية وحفظها في git.
+
+## الأعمال المنجزة اليوم/هذا الأسبوع (2025-07-13)
+
+- تم تعديل الواجهة الخلفية لتكون اكثر استقرارا ومازالت تحتاج الي بعض التعديل
+- الان يمكن للمستخدم ان يسجل الدخول باستخدام (Facbook, Google) ولكن لا يزال يجب اضافة التسجيل باستخدام LinkedIn
+- تم تعديل ملف .gitignore لكي لا يتتبع الملفات الخاصة وبعض الملفات الاخري التي لا يجب تتبعها
+- تم تعديل تسجيل الدخول باستخدام فيسبوك، وتم استخدام Facebook SDK لعرض نافذة تسجيل الدخول وتسجيل الدخول بطريقة احترافية.
+
+
+## Work completed today/this week (2025-07-13)
+
+- The backend has been modified to be more stable, but it still needs some adjustments.
+- Users can now log in using (Facebook, Google), but LinkedIn login still needs to be added.
+- The .gitignore file has been updated to exclude private files and other unnecessary files from tracking.
+- Modified
+- Facebook login has been updated using the Facebook SDK to display a login popup and handle authentication professionally.
+

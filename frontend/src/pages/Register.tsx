@@ -1,4 +1,5 @@
 import { GoogleLogin } from "@react-oauth/google";
+import FacebookLoginButton from "../components/FacebookLoginButton"; // تأكد من المسار الصحيح
 
 function Register({
   isModal = false,
@@ -7,11 +8,10 @@ function Register({
   isModal?: boolean;
   onSwitch?: () => void;
 }) {
-
   const handleLinkedInRegister = () => {
     alert("LinkedIn registration is not enabled yet");
-    // You can add real LinkedIn registration logic here
   };
+
   return (
     <div
       className={
@@ -55,7 +55,6 @@ function Register({
         <div className="flex flex-col gap-3 mb-6">
           <GoogleLogin
             onSuccess={(credentialResponse) => {
-              // Here you can send the token to your backend or save it in state
               console.log(credentialResponse);
             }}
             onError={() => {
@@ -66,21 +65,8 @@ function Register({
             shape="pill"
             locale="ar"
           />
-          <button
-            className="flex items-center justify-center gap-2 w-full py-2 rounded-full text-sm font-medium border"
-            style={{
-              backgroundColor: "#fff",
-              color: "#1877f2",
-              borderColor: "#1877f2",
-            }}
-            onClick={() =>
-              (window.location.href =
-                "http://localhost:8000/accounts/facebook/login/")
-            }
-          >
-            <i className="fab fa-facebook-f text-lg"></i>
-            <span>Register with Facebook</span>
-          </button>
+
+          <FacebookLoginButton /> {/* ✅ زر فيسبوك الحقيقي */}
 
           <button
             className="btn-secondary w-full"
@@ -89,6 +75,7 @@ function Register({
             Register with LinkedIn
           </button>
         </div>
+
         <div className="text-center text-gray-600">
           {!isModal ? (
             <>

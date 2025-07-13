@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    
+
     # مواقع التواصل اللي هتستخدمها
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.facebook',
@@ -171,3 +171,9 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
+SOCIAL_AUTH_FACEBOOK_KEY = '932182522356357'
+SOCIAL_AUTH_FACEBOOK_SECRET = '42b89f5b88ee605e0c879b7d0439de66'
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
+    'fields': 'id, name, email'
+}
