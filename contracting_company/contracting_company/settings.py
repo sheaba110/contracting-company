@@ -27,22 +27,26 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     
+    # REST Framework
     'rest_framework',
     'rest_framework.authtoken',
+    'rest_framework_simplejwt',
+    
+    # Authentication
     'dj_rest_auth',
     'dj_rest_auth.registration',
-    
-    "corsheaders",
-    "core",
-
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-
-    # مواقع التواصل اللي هتستخدمها
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.linkedin_oauth2',
+    
+    # CORS
+    "corsheaders",
+    
+    # Local apps
+    "core",
 ]
 
 
@@ -176,4 +180,25 @@ SOCIAL_AUTH_FACEBOOK_SECRET = '42b89f5b88ee605e0c879b7d0439de66'
 SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
     'fields': 'id, name, email'
+}
+
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_CONFIRM_EMAIL_ON_GET = True
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_UNIQUE_EMAIL = True
+REST_AUTH_REGISTER_SERIALIZERS = {
+    'REGISTER_SERIALIZER': 'dj_rest_auth.registration.serializers.RegisterSerializer',
+}
+
+# Update these settings
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = True
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+
+REST_AUTH = {
+    'USE_JWT': True,
+    'JWT_AUTH_COOKIE': 'auth-token',
+    'JWT_AUTH_REFRESH_COOKIE': 'refresh-token',
+    'REGISTER_SERIALIZER': 'dj_rest_auth.registration.serializers.RegisterSerializer',
 }
