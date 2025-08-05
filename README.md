@@ -37,3 +37,11 @@
 - Modified
 - Facebook login has been updated using the Facebook SDK to display a login popup and handle authentication professionally.
 
+
+## الأعمال المنجزة اليوم/هذا الأسبوع (2025-08-5)
+
+- لقد حذفت الواجهة الأمامية لأن الذكاء الاصطناعي دمر المنطق على الاخر، كنت أريد أن تكون المصادقة على جانب الخادم ولكن الذكاء الاصطناعي جعلها على جانب العميل لذلك بدأت من الخطوة الأولى لبناء نظام الواجهة الخلفية الصحيح بدون المزيد من الذكاء الاصطناعي بين يدي لذا أتمنى لي التوفيق.
+
+## Work completed today/this week (2025-08-5)
+
+- I deleted the frontend becouse the AI ruined the logic, I wanted the authentication to be on the server side but the AI made it on the client side so I  started from the first step to build the wright backend system with no more AI all by my hands so wish me luck.
